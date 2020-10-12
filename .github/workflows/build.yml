@@ -1,4 +1,4 @@
-name: Build Cards
+name: Build elementaryOS
 
 on:
   push:
@@ -30,15 +30,15 @@ jobs:
     - name: Upload disk image
       uses: actions/upload-artifact@v2.1.4
       with:
-        name: cards
-        path: ~/cards-*.*.*-x86_64.iso
+        name: elementary
+        path: ~/elementary-*.*.*-x86_64.iso
         if-no-files-found: error
 
     - name: Upload build profile
       uses: actions/upload-artifact@v2.1.4
       with:
         name: profile
-        path: ~/cards-profile
+        path: ~/elementary-profile
         if-no-files-found: error
 
     - name: Upload local repository
