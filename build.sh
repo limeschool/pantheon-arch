@@ -88,9 +88,6 @@ gnome-control-center
 gnome-disk-utility
 gnome-keyring
 gnome-shell
-gnome-shell-extension-dash-to-dock
-gnome-shell-extension-emoji-selector-git
-gnome-shell-extensions
 gnome-software
 gnome-software-packagekit-plugin
 gnome-system-monitor
