@@ -1,0 +1,8 @@
+NAME=elementaryOS
+VERSION="Rolling"
+ID=elementary
+VERSION_ID=1
+PRETTY_NAME="elementaryOS"
+ANSI_COLOR="0;35"
+VARIANT="x86_64"
+VARIANT_ID=x86_64

@@ -1,0 +1,49 @@
+name: Build Cards
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: archlinux:latest
+      volumes:
+        - /proc:/proc
+        - /sys/fs/cgroup/systemd/actions_job:/sys/fs/cgroup/systemd/actions_job
+        - /sys/fs/cgroup:/sys/fs/cgroup
+      options: --privileged
+
+    steps:
+    - name: Clone build scripts
+      uses: actions/checkout@v1
+
+    - name: Build & bundle disk image
+      run: |
+        chmod +x ./build.sh
+        ./build.sh
+
+    - name: Upload disk image
+      uses: actions/upload-artifact@v2.1.4
+      with:
+        name: cards
+        path: ~/cards-*.*.*-x86_64.iso
+        if-no-files-found: error
+
+    - name: Upload build profile
+      uses: actions/upload-artifact@v2.1.4
+      with:
+        name: profile
+        path: ~/cards-profile
+        if-no-files-found: error
+
+    - name: Upload local repository
+      uses: actions/upload-artifact@v2.1.4
+      with:
+        name: local_repo
+        path: ~/local-repo
+        if-no-files-found: error
