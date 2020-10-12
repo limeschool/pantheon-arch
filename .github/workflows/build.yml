@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v2.1.4
       with:
         name: elementary
-        path: ~/elementary-*.*.*-x86_64.iso
+        path: ~/elementaryOS-*.*.*-x86_64.iso
         if-no-files-found: error
 
     - name: Upload build profile
