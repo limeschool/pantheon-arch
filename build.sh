@@ -52,7 +52,6 @@ switchboard-plug-elementary-tweaks-git \
 pantheon-calculator-git \
 pantheon-calendar-git \
 pantheon-camera-git \
-pantheon-code-git \
 pantheon-files-git \
 pantheon-music-git \
 pantheon-photos-git \
@@ -122,7 +121,7 @@ pantheon-applications-menu-git
 pantheon-calculator-git
 pantheon-calendar-git
 pantheon-camera-git
-pantheon-code-git
+pantheon-code
 pantheon-default-settings-git
 pantheon-dpms-helper
 pantheon-files-git
