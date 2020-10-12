@@ -223,4 +223,4 @@ ln -s /lib/modules-load.d/virtualbox-guest-dkms.conf ${PROFILE}/airootfs/etc/mod
 mkdir ./out
 mkdir /tmp/archiso-tmp
 mkarchiso -v -w /tmp/archiso-tmp ${PROFILE}
-mv ./out/elementary-*.*.*-x86_64.iso ~
+mv ./out/elementaryOS-*.*.*-x86_64.iso ~
