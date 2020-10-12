@@ -41,9 +41,9 @@ pantheon-screencast \
 clipped-git \
 yay \
 ttf-twemoji-color \
-elementary-icon-theme-git
-elementary-wallpapers-git
-pantheon-applications-menu-git
+elementary-icon-theme-git \
+elementary-wallpapers-git \
+pantheon-applications-menu-git \
 gala-git \
 gtk-theme-elementary-git \
 pantheon-default-settings-git \
