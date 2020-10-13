@@ -44,7 +44,6 @@ ttf-twemoji-color \
 elementary-icon-theme-git \
 elementary-wallpapers-git \
 pantheon-applications-menu-git \
-gala-git \
 gtk-theme-elementary-git \
 pantheon-default-settings-git \
 pantheon-session-git \
@@ -107,7 +106,7 @@ elementary-wallpapers-git
 epiphany
 file-roller
 flatpak
-gala-git
+gala
 gdm
 geary
 glfw-wayland
