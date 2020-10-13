@@ -7,7 +7,8 @@ umask 0022 # Correct file permissions
 systemd-machine-id-setup # Prevents errors when building AUR packages
 
 pacman -Syu archiso git base-devel jq expac diffstat pacutils wget devtools libxslt cmake \
-intltool gtk-doc gobject-introspection gnome-common polkit dbus-glib meson plank vala gnome-settings-daemon --noconfirm --noprogressbar # Install packages we'll need to build
+intltool gtk-doc gobject-introspection gnome-common polkit dbus-glib libhandy \
+meson plank vala gnome-settings-daemon --noconfirm --noprogressbar # Install packages we'll need to build
 
 # Allow us to use a standard user account w/ password-less sudo privilege (for building AUR packages later)
 tee -a /etc/sudoers > /dev/null <<EOT
@@ -87,7 +88,8 @@ wingpanel-indicator-nightlight-git \
 wingpanel-indicator-notifications-git \
 wingpanel-indicator-power-git \
 wingpanel-indicator-session-git \
-wingpanel-indicator-sound-git"
+wingpanel-indicator-sound-git \
+pantheon-mail-git"
 
 echo -e "LOCAL_REPO:\n---"
 ls ${LOCAL_REPO}
@@ -107,7 +109,7 @@ file-roller
 flatpak
 gala
 gdm
-geary
+#geary
 glfw-wayland
 gnome-control-center
 gnome-disk-utility
@@ -147,6 +149,7 @@ pantheon-default-settings-git
 pantheon-dpms-helper
 pantheon-files-git
 pantheon-geoclue2-agent
+pantheon-mail-git
 pantheon-music-git
 pantheon-photos-git
 pantheon-polkit-agent
