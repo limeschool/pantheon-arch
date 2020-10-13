@@ -87,7 +87,8 @@ wingpanel-indicator-notifications-git \
 wingpanel-indicator-power-git \
 wingpanel-indicator-session-git \
 wingpanel-indicator-sound-git \
-pantheon-mail-git"
+pantheon-mail-git \
+gdm-plymouth"
 
 echo -e "LOCAL_REPO:\n---"
 ls ${LOCAL_REPO}
@@ -106,7 +107,7 @@ epiphany
 file-roller
 flatpak
 gala
-gdm
+gdm-plymouth
 glfw-wayland
 gnome-control-center
 gnome-keyring
