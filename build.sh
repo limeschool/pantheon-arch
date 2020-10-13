@@ -38,7 +38,7 @@ ttf-raleway \
 gnome-doc-utils \
 libhandy1 \
 pantheon-screencast \
-clipped-git \
+pantheon-system-monitor-git \
 yay \
 ttf-twemoji-color \
 elementary-icon-theme-git \
@@ -59,7 +59,37 @@ pantheon-screenshot-git \
 pantheon-shortcut-overlay-git \
 pantheon-terminal-git \
 pantheon-videos-git \
-switchboard-plug-elementary-tweaks-git"
+switchboard-git \
+switchboard-plug-a11y-git \
+switchboard-plug-about-git \
+switchboard-plug-applications-git \
+switchboard-plug-bluetooth-git \
+switchboard-plug-datetime-git \
+switchboard-plug-desktop-git \
+switchboard-plug-display-git \
+switchboard-plug-keyboard-git \
+switchboard-plug-locale-git \
+switchboard-plug-mouse-touchpad-git \
+switchboard-plug-network-git \
+switchboard-plug-notifications-git \
+switchboard-plug-online-accounts-git \
+switchboard-plug-parental-controls-git \
+switchboard-plug-power-git \
+switchboard-plug-printers-git \
+switchboard-plug-security-privacy-git \
+switchboard-plug-sharing-git \
+switchboard-plug-sound-git \
+switchboard-plug-user-accounts-git \
+wingpanel-git \
+wingpanel-indicator-bluetooth-git \
+wingpanel-indicator-datetime-git \
+wingpanel-indicator-keyboard-git \
+wingpanel-indicator-network-git \
+wingpanel-indicator-nightlight-git \
+wingpanel-indicator-notifications-git \
+wingpanel-indicator-power-git \
+wingpanel-indicator-session-git \
+wingpanel-indicator-sound-git"
 
 echo -e "LOCAL_REPO:\n---"
 ls ${LOCAL_REPO}
@@ -69,7 +99,6 @@ echo "---"
 tee -a ${PROFILE}/packages.x86_64 > /dev/null <<EOT
 archlinux-appstream-data
 capnet-assist
-clipped-git
 contractor
 cups
 cups-pk-helper
@@ -82,15 +111,12 @@ gala-git
 gdm
 geary
 glfw-wayland
-gnome-backgrounds
-gnome-characters
 gnome-control-center
 gnome-disk-utility
 gnome-keyring
 gnome-shell
 gnome-software
 gnome-software-packagekit-plugin
-gnome-system-monitor
 gnome-user-share
 gnu-free-fonts
 gtk-engine-murrine
@@ -131,6 +157,7 @@ pantheon-screencast
 pantheon-screenshot-git
 pantheon-session-git
 pantheon-shortcut-overlay-git
+pantheon-system-monitor-git
 pantheon-terminal-git
 pantheon-videos-git
 plank
@@ -140,28 +167,28 @@ qt5-translations
 qt5-wayland
 rygel
 sound-theme-elementary
-switchboard
-switchboard-plug-a11y
-switchboard-plug-about
-switchboard-plug-applications
-switchboard-plug-bluetooth
-switchboard-plug-datetime
-switchboard-plug-desktop
-switchboard-plug-display
+switchboard-git
+switchboard-plug-a11y-git
+switchboard-plug-about-git
+switchboard-plug-applications-git
+switchboard-plug-bluetooth-git
+switchboard-plug-datetime-git
+switchboard-plug-desktop-git
+switchboard-plug-display-git
 switchboard-plug-elementary-tweaks-git
-switchboard-plug-keyboard
-switchboard-plug-locale
-switchboard-plug-mouse-touchpad
-switchboard-plug-network
-switchboard-plug-notifications
-switchboard-plug-online-accounts
-switchboard-plug-parental-controls
-switchboard-plug-power
-switchboard-plug-printers
-switchboard-plug-security-privacy
-switchboard-plug-sharing
-switchboard-plug-sound
-switchboard-plug-user-accounts
+switchboard-plug-keyboard-git
+switchboard-plug-locale-git
+switchboard-plug-mouse-touchpad-git
+switchboard-plug-network-git
+switchboard-plug-notifications-git
+switchboard-plug-online-accounts-git
+switchboard-plug-parental-controls-git
+switchboard-plug-power-git
+switchboard-plug-printers-git
+switchboard-plug-security-privacy-git
+switchboard-plug-sharing-git
+switchboard-plug-sound-git
+switchboard-plug-user-accounts-git
 tracker
 tracker-miners
 tracker3
@@ -178,16 +205,16 @@ vala
 vulkan-radeon
 wayland
 wayland-protocols
-wingpanel
-wingpanel-indicator-bluetooth
-wingpanel-indicator-datetime
-wingpanel-indicator-keyboard
-wingpanel-indicator-network
-wingpanel-indicator-nightlight
-wingpanel-indicator-notifications
-wingpanel-indicator-power
-wingpanel-indicator-session
-wingpanel-indicator-sound
+wingpanel-git
+wingpanel-indicator-bluetooth-git
+wingpanel-indicator-datetime-git
+wingpanel-indicator-keyboard-git
+wingpanel-indicator-network-git
+wingpanel-indicator-nightlight-git
+wingpanel-indicator-notifications-git
+wingpanel-indicator-power-git
+wingpanel-indicator-session-git
+wingpanel-indicator-sound-git
 wlc
 xdg-user-dirs-gtk
 xf86-input-libinput
@@ -218,6 +245,12 @@ ln -s /lib/systemd/system/cups.socket ${PROFILE}/airootfs/etc/systemd/system/soc
 ln -s /lib/systemd/system/avahi-daemon.socket ${PROFILE}/airootfs/etc/systemd/system/sockets.target.wants
 ln -s /lib/systemd/system/bluetooth.service ${PROFILE}/airootfs/etc/systemd/system/bluetooth.target.wants
 ln -s /lib/modules-load.d/virtualbox-guest-dkms.conf ${PROFILE}/airootfs/etc/modules-load.d
+
+# Set up Pantheon environment
+mkdir -p ${PROFILE}/airootfs/usr/share/backgrounds
+mkdir -p ${PROFILE}/airootfs/etc/xdg/autostart
+ln -s '/usr/share/backgrounds/Sunset by the Pier.jpg' ${PROFILE}/airootfs/usr/share/backgrounds/elementaryos-default # Set default background
+ln -s /usr/share/applications/plank.desktop ${PROFILE}/airootfs/etc/xdg/autostart/plank.desktop # Set Plank to start automatically
 
 # Build & bundle the disk image
 mkdir ./out
