@@ -52,6 +52,7 @@ switchboard-plug-elementary-tweaks-git \
 pantheon-calculator-git \
 pantheon-calendar-git \
 pantheon-camera-git \
+pantheon-code-git \
 pantheon-files-git \
 pantheon-music-git \
 pantheon-photos-git \
@@ -109,7 +110,6 @@ flatpak
 gala
 gdm-plymouth
 glfw-wayland
-gnome-control-center
 gnome-keyring
 gnome-shell
 gnome-software
@@ -141,7 +141,7 @@ pantheon-applications-menu-git
 pantheon-calculator-git
 pantheon-calendar-git
 pantheon-camera-git
-pantheon-code
+pantheon-code-git
 pantheon-default-settings-git
 pantheon-dpms-helper
 pantheon-files-git
