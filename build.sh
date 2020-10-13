@@ -79,7 +79,6 @@ switchboard-plug-security-privacy-git \
 switchboard-plug-sharing-git \
 switchboard-plug-sound-git \
 switchboard-plug-user-accounts-git \
-wingpanel-git \
 wingpanel-indicator-bluetooth-git \
 wingpanel-indicator-datetime-git \
 wingpanel-indicator-keyboard-git \
@@ -204,7 +203,7 @@ vala
 vulkan-radeon
 wayland
 wayland-protocols
-wingpanel-git
+wingpanel
 wingpanel-indicator-bluetooth-git
 wingpanel-indicator-datetime-git
 wingpanel-indicator-keyboard-git
