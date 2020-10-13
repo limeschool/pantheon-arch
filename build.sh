@@ -65,7 +65,6 @@ switchboard-plug-about-git \
 switchboard-plug-applications-git \
 switchboard-plug-bluetooth-git \
 switchboard-plug-datetime-git \
-switchboard-plug-desktop-git \
 switchboard-plug-display-git \
 switchboard-plug-keyboard-git \
 switchboard-plug-locale-git \
@@ -76,7 +75,6 @@ switchboard-plug-online-accounts-git \
 switchboard-plug-parental-controls-git \
 switchboard-plug-power-git \
 switchboard-plug-printers-git \
-switchboard-plug-security-privacy-git \
 switchboard-plug-sharing-git \
 switchboard-plug-sound-git \
 switchboard-plug-user-accounts-git \
@@ -109,10 +107,8 @@ file-roller
 flatpak
 gala
 gdm
-#geary
 glfw-wayland
 gnome-control-center
-gnome-disk-utility
 gnome-keyring
 gnome-shell
 gnome-software
@@ -174,7 +170,7 @@ switchboard-plug-about-git
 switchboard-plug-applications-git
 switchboard-plug-bluetooth-git
 switchboard-plug-datetime-git
-switchboard-plug-desktop-git
+switchboard-plug-desktop
 switchboard-plug-display-git
 switchboard-plug-elementary-tweaks-git
 switchboard-plug-keyboard-git
@@ -186,7 +182,7 @@ switchboard-plug-online-accounts-git
 switchboard-plug-parental-controls-git
 switchboard-plug-power-git
 switchboard-plug-printers-git
-switchboard-plug-security-privacy-git
+switchboard-plug-security-privacy
 switchboard-plug-sharing-git
 switchboard-plug-sound-git
 switchboard-plug-user-accounts-git
