@@ -15,6 +15,7 @@ sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 rm -f /usr/share/xsessions/gnome-classic.desktop
 rm -f /usr/share/xsessions/gnome-xorg.desktop
 rm -f /usr/share/xsessions/gnome.desktop
+rm -f /usr/share/wayland-sessions/gnome.desktop
 
 # Enable task completion notifications for pantheon-terminal
 tee -a /etc/zsh/zshrc > /dev/null <<EOT
