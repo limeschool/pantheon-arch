@@ -89,7 +89,6 @@ wingpanel-indicator-nightlight-git \
 wingpanel-indicator-notifications-git \
 wingpanel-indicator-power-git \
 wingpanel-indicator-session-git \
-wingpanel-indicator-sound-git \
 pantheon-mail-git \
 gdm-plymouth"
 
@@ -214,7 +213,7 @@ wingpanel-indicator-nightlight-git
 wingpanel-indicator-notifications-git
 wingpanel-indicator-power-git
 wingpanel-indicator-session-git
-wingpanel-indicator-sound-git
+wingpanel-indicator-sound
 wlc
 xdg-user-dirs-gtk
 xf86-input-libinput
